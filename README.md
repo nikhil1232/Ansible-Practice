@@ -21,7 +21,7 @@ A small practice scenario envolving deployment of various services in automated 
 
 ## Solutions: Practice Scenario
 1) Create a script which will create 5 containers that could be used with vagrant for orchestration. With the following names: frontend-1, frontend-2, backend-1, backend-2, controller: 
-#####<Solution>#####
+#####<Solution>
 A bash script(main.sh) that would help in setting up everything required in order to complete the assessment. A vagrant file was also prepared(present in this repository) that would help in creation of 5 nodes with the names specified above. (NOTE: FOR completing this whole assessment all you need to run is the "**bash main.sh**" and all the files present in this repository should be cloned in the same directory)
 
 2) All those containers must have ssh access on port 22. 
