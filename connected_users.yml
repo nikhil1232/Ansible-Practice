@@ -1,0 +1,19 @@
+- hosts: ser
+  tasks:
+  - name: Execute the w command
+    shell: w -i -f
+    register: show
+  - debug: var=show.stdout_lines  
+  
+  - name: Date shell
+    shell: date "+%Y-%m-%d"
+    register: kol
+  - set_fact: kol={{ kol.stdout }}
+
+  - name: Time shell
+    shell: date "+%T"
+    register: time
+  - set_fact: time={{ time.stdout }}
+  
+  - local_action: copy content="{{ show.stdout }}" dest=~/connected_users_{{ inventory_hostname }}_{{ kol }}_{{ time  }}.log
+
