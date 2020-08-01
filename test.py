@@ -187,7 +187,7 @@ try:
        print("Status : FAIL\n")
     else:
        length = lala.count('\n')
-       if (length >= 2):
+       if (length >= 4):
          print("Status : PASS\n\n{}\n".format(output))
        else:
          print("Status : FAIL\n")
