@@ -73,4 +73,16 @@ bash main.sh
 python3 test.py
 ```
 
+## Main.sh
+
+This script is the main script that is responsible for setting up the whole environment automatically.
+
+![Main.sh 1](https://raw.githubusercontent.com/nikhil1232/Ansible-Practice/master/Images/main1.png)
+
+![Main.sh 2](https://raw.githubusercontent.com/nikhil1232/Ansible-Practice/master/Images/main2.png)
+
+![Main.sh 3](https://raw.githubusercontent.com/nikhil1232/Ansible-Practice/master/Images/main3.png)
+
+![Output 1](https://raw.githubusercontent.com/nikhil1232/Ansible-Practice/master/Images/output1.png)
+
 
