@@ -62,9 +62,8 @@ bash main.sh
 ```
 
 ## Instructions: To check for PASS and FAIL cases
-
-# Clone the whole repository
 ```shell
+# Clone the whole repository
 git clone https://github.com/nikhil1232/Ansible-Practice
 cd Ansible-Practice
 # Run this once before running the main.sh script
