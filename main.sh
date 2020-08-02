@@ -30,7 +30,7 @@ scp -o "StrictHostKeyChecking no" -i /root/.vagrant/machines/backend-2/virtualbo
 rm tmp.pub
 
 # Transfer the connected_users.yml playbook(present in this repo) to the controller node and execute it using ansible.
-scp -o "StrictHostKeyChecking no" -i /root/.vagrant/machines/controller/virtualbox/private_key connected_users.yml vagrant@192.168.0.124:~ && vagrant ssh controller -c "ansible-playbook ~/connected_users.yml"
+scp -o "StrictHostKeyChecking no" -i /root/.vagrant/machines/controller/virtualbox/private_key connected_users.yml vagrant@192.168.0.124:~ && vagrant ssh controller -c "ansible-playbook ~/connected_users.yml --ssh-common-args='-o StrictHostKeyChecking=no'"
 
 
 
