@@ -7,6 +7,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.box = "bento/ubuntu-18.04"
 
+  # Responsible for resolving IP address to hostnames
   $script = <<-SCRIPT
   sudo sh -c "echo '192.168.0.124   controller.com  controller' >> /etc/hosts"
   sudo sh -c "echo '192.168.0.120   frontend-1.com  frontend-1' >> /etc/hosts"
@@ -15,29 +16,35 @@ Vagrant.configure("2") do |config|
   sudo sh -c "echo '192.168.0.122   backend-2.com  backend-2' >> /etc/hosts"
   SCRIPT
 
+  # Responsible to install and configure apache httpd server and make port 80 open with "Hello world" message
   $web = <<-SCRIPT
   sudo apt-get install apache2 -y && systemctl start apache2.service
   sudo sh -c "echo '<h1>Hello World</h1>' > /var/www/html/index.html"
   SCRIPT
 
+  # Responsible to install and configure Mariadb
   $db = <<-SCRIPT
   sudo apt-get update -y
   sudo apt-get install mariadb-server mariadb-client -y
   SCRIPT
 
+  # Responsible to install Vim
   $edit = <<-SCRIPT
   sudo apt-get install vim -y
   SCRIPT
 
+  # Responsible to remove Vim
   $edit2 = <<-SCRIPT
   sudo apt-get remove vim --purge -y
   SCRIPT
 
+  # Responsible to block password based ssh authentication from the controller node
   $sshblock = <<-SCRIPT
   sudo sh -c "echo 'Match address 192.168.0.124\n    PasswordAuthentication no' >> /etc/ssh/sshd_config"
   sudo service sshd restart
   SCRIPT
 
+  # Responsible to install ansible and setting up the ansible hosts file
   $ans = <<-SCRIPT
   sudo apt-add-repository ppa:ansible/ansible
   sudo apt-get update -y
