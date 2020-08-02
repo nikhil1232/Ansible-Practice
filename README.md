@@ -86,3 +86,25 @@ This script is the main script that is responsible for setting up the whole envi
 ![Output 1](https://raw.githubusercontent.com/nikhil1232/Ansible-Practice/master/Images/output1.png)
 
 
+## Test.py
+
+This python file is the test script that is responsible for checking if all the test cases have been passed or failed. This scripts needs to be run once before executing the main.sh script and once after executing the main.sh script.
+
+**Before running the main.sh script:**
+
+![Test.py 1](https://raw.githubusercontent.com/nikhil1232/Ansible-Practice/master/Images/test1.png)
+
+![Test.py 2](https://raw.githubusercontent.com/nikhil1232/Ansible-Practice/master/Images/test2.png)
+
+
+**After running the main.sh script:**
+
+![Test.py 3](https://raw.githubusercontent.com/nikhil1232/Ansible-Practice/master/Images/test3.png)
+
+![Test.py 4](https://raw.githubusercontent.com/nikhil1232/Ansible-Practice/master/Images/test4.png)
+
+
+
+
+
+
