@@ -97,6 +97,8 @@ This python file is the test script that is responsible for checking if all the 
 ![Test.py 2](https://raw.githubusercontent.com/nikhil1232/Ansible-Practice/master/Images/test2.png)
 
 
+
+
 **After running the main.sh script:**
 
 ![Test.py 3](https://raw.githubusercontent.com/nikhil1232/Ansible-Practice/master/Images/test3.png)
